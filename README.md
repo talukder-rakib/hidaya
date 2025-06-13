@@ -56,7 +56,9 @@ Create a .env file in the root with:
 
 # Firebase
 FIREBASE_PROJECT_ID=your_project_id
+
 FIREBASE_CLIENT_EMAIL=your_service_account_email
+
 FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\\n..."
 
 # MongoDB
@@ -64,16 +66,21 @@ MONGODB_URI=your project uri
 
 # Supabase
 SUPABASE_URL=https://your-project.supabase.co
+
 SUPABASE_ANON_KEY=your_supabase_anon_key
 
 3. Run Backend
 cd backend
+
 npm install
+
 npm run dev
 
-4. Run Frontend
+5. Run Frontend
 cd ..
+
 npm run dev
+
 Visit: http://localhost:5173
 
 🔐 Security & Best Practices
