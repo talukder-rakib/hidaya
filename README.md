@@ -47,12 +47,15 @@ Built using modern full-stack technologies, Hidaya delivers both functionality a
  1. Clone & Install
 
 git clone https://github.com/talukder-rakib/hidaya.git
+
 cd hidaya
+
 npm install
+
 2. Environment Setup
 Create a .env file in the root with:
 
-.env
+env
 
 # Firebase
 FIREBASE_PROJECT_ID=your_project_id
@@ -126,8 +129,11 @@ Tailwind CSS
 We welcome contributions!
 
 git checkout -b feature/your-feature-name
+
 git commit -m "Add: your feature"
+
 git push origin feature/your-feature-name
+
 Then create a Pull Request. Your efforts are appreciated 💖
 
 📜 License
