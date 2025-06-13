@@ -128,8 +128,6 @@ HIDAYA/
 └── vite.config.ts
 
 
-
-
  🚀 Getting Started
 
  1. Clone & Install
@@ -148,7 +146,7 @@ FIREBASE_CLIENT_EMAIL=your_service_account_email
 FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\\n..."
 
 # MongoDB
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/hidaya
+MONGODB_URI=your project uri
 
 # Supabase
 SUPABASE_URL=https://your-project.supabase.co
