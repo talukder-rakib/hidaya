@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-4">ইসলামিক হাব</h3>
+            <h3 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-4">হিদায়াহ</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              বাংলাভাষী মুসলিমদের জন্য একটি পূর্ণাঙ্গ ইসলামিক রিসোর্স হাব। আল্লাহর পথে জ্ঞান অর্জন ও বিতরণ করা আমাদের লক্ষ্য।
+              বাংলাভাষী মুসলিমদের জন্য একটি পূর্ণাঙ্গ ইসলামিক রিসোর্স। আল্লাহর পথে জ্ঞান অর্জন ও বিতরণ করা আমাদের লক্ষ্য।
             </p>
           </div>
           
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-4">যোগাযোগ</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-2">
-              ইমেইল: info@islamichub.com
+              ইমেইল: info@hidaya.com
             </p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-primary-500 hover:text-primary-600">
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-4 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ইসলামিক হাব। সর্বসত্ব সংরক্ষিত।</p>
+          <p>&copy; {new Date().getFullYear()} হিদায়াহ । সর্বসত্ব সংরক্ষিত।</p>
         </div>
       </div>
     </footer>

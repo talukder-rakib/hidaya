@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { X, BookOpen, BookText, Music, Clock, Calculator, BookMarked, Video, HeartHandshake, Heart, MessageCircle } from 'lucide-react';
+import { X, BookOpen, BookText, Music, Clock, Calculator, BookMarked, Video, HeartHandshake, Heart, MessageCircle,Compass } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -13,6 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: "কুরআন", path: "/quran", icon: <BookText size={20} /> },
     { name: "হাদিস", path: "/hadith", icon: <BookMarked size={20} /> },
     { name: "নামাজের সময়", path: "/prayer-times", icon: <Clock size={20} /> },
+    { name: "কিবলা", path: "/qibla-direction", icon: <Compass size={20} /> },
     { name: "যাকাত ক্যালকুলেটর", path: "/zakat-calculator", icon: <Calculator size={20} /> },
     { name: "ইসলামিক বই", path: "/books", icon: <BookOpen size={20} /> },
     { name: "লেকচার", path: "/lectures", icon: <Video size={20} /> },

@@ -1,5 +1,17 @@
-For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+Build a fullstack web app with both frontend and backend. Use React with JSX, Tailwind CSS, React hooks, and Lucide React icons. Design must be beautiful, responsive, and production-ready—avoid cookie-cutter layouts.
 
-By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+Frontend must include:
 
-Use icons from lucide-react for logos.
+Clean component structure
+
+Professional, modern UI using Tailwind
+
+Lucide React icons for all iconography (no external UI libraries unless necessary)
+
+Backend must include:
+
+RESTful or RPC-style API (preferably Node.js/Express or Supabase Edge Functions)
+
+Connected to a database (MongoDB or Supabase)
+
+Ensure the frontend fetches and displays data from the backend. All components and logic should be built cleanly and professionally with scalability in mind. Avoid generic or lazy solutions.

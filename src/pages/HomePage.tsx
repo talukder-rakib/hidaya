@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          ইসলামিক হাব - আপনার ডিজিটাল ইসলামিক কেন্দ্র
+          হিদায়াহ - আপনার ডিজিটাল ইসলামিক কেন্দ্র
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
           কুরআন, হাদিস, দোয়া, নামাজের সময় ও ইসলামিক জ্ঞানের জন্য আপনার একটি সম্পূর্ণ প্লাটফর্ম
@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
       <section className="mb-16">
         <div className="bg-primary-500 text-white rounded-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            আপনার মোবাইলে ইসলামিক হাব নিয়ে যান
+            আপনার মোবাইলে হিদায়াহ নিয়ে যান
           </h2>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
             আমাদের অ্যান্ড্রয়েড এবং উইন্ডোজ অ্যাপ ডাউনলোড করুন এবং যেকোনো সময় ইসলামিক কন্টেন্ট অ্যাক্সেস করুন।

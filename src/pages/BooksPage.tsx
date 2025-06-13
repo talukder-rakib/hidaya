@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionHeader from '../components/common/SectionHeader';
 import { BookOpen, Download, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';  // <-- Import Link
 
-// Sample data for books
 const books = [
   {
     id: 1,
@@ -12,7 +12,7 @@ const books = [
     format: 'PDF',
     size: '25 MB',
     language: 'বাংলা',
-    downloadLink: '#',
+    // Removed downloadLink or set to real URL if available
   },
   {
     id: 2,
@@ -22,7 +22,6 @@ const books = [
     format: 'PDF',
     size: '18 MB',
     language: 'বাংলা',
-    downloadLink: '#',
   },
   {
     id: 3,
@@ -32,11 +31,9 @@ const books = [
     format: 'PDF',
     size: '20 MB',
     language: 'বাংলা',
-    downloadLink: '#',
   },
 ];
 
-// Sample data for articles
 const articles = [
   {
     id: 1,
@@ -46,7 +43,6 @@ const articles = [
     format: 'PDF',
     size: '1.2 MB',
     language: 'বাংলা',
-    downloadLink: '#',
   },
   {
     id: 2,
@@ -56,7 +52,6 @@ const articles = [
     format: 'PDF',
     size: '0.8 MB',
     language: 'বাংলা',
-    downloadLink: '#',
   },
 ];
 
@@ -123,13 +118,13 @@ const BooksPage: React.FC = () => {
               </div>
               
               <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-                <a 
-                  href={book.downloadLink} 
+                <Link 
+                  to="/coming-soon" 
                   className="btn btn-primary w-full flex items-center justify-center"
                 >
                   <Download size={16} className="mr-2" />
                   <span>ডাউনলোড করুন</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -171,13 +166,13 @@ const BooksPage: React.FC = () => {
               </div>
               
               <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-                <a 
-                  href={article.downloadLink} 
+                <Link 
+                  to="/coming-soon" 
                   className="btn btn-primary w-full flex items-center justify-center"
                 >
                   <Download size={16} className="mr-2" />
                   <span>ডাউনলোড করুন</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

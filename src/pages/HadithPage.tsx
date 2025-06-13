@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SectionHeader from '../components/common/SectionHeader';
 
 // Sample data for hadith collections
@@ -13,14 +14,14 @@ const hadithCollections = [
 
 // Sample data for hadith categories
 const hadithCategories = [
-  { id: 1, name: 'ঈমান', count: 150 },
-  { id: 2, name: 'নামাজ', count: 320 },
-  { id: 3, name: 'রোজা', count: 180 },
-  { id: 4, name: 'যাকাত', count: 120 },
-  { id: 5, name: 'হজ্জ', count: 210 },
-  { id: 6, name: 'নিকাহ', count: 95 },
-  { id: 7, name: 'ব্যবসা', count: 110 },
-  { id: 8, name: 'আখলাক', count: 240 },
+  { id: 1, name: 'ঈমান', slug: 'iman', count: 150 },
+  { id: 2, name: 'নামাজ', slug: 'namaz', count: 320 },
+  { id: 3, name: 'রোজা', slug: 'roza', count: 180 },
+  { id: 4, name: 'যাকাত', slug: 'zakat', count: 120 },
+  { id: 5, name: 'হজ্জ', slug: 'hajj', count: 210 },
+  { id: 6, name: 'নিকাহ', slug: 'nikah', count: 95 },
+  { id: 7, name: 'ব্যবসা', slug: 'business', count: 110 },
+  { id: 8, name: 'আখলাক', slug: 'akhlaq', count: 240 },
 ];
 
 const HadithPage: React.FC = () => {
@@ -54,6 +55,7 @@ const HadithPage: React.FC = () => {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        {/* Hadith Collections List */}
         <div className="md:col-span-2">
           <div className="card">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
@@ -62,9 +64,10 @@ const HadithPage: React.FC = () => {
             
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
               {hadithCollections.map((collection) => (
-                <div 
+                <Link 
+                  to={`/hadith/collection/${collection.id}`}
                   key={collection.id}
-                  className="p-4 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
+                  className="block p-4 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
                 >
                   <div className="flex items-center">
                     <div className="flex-1">
@@ -78,12 +81,13 @@ const HadithPage: React.FC = () => {
                       <p className="arabic text-lg text-gray-800 dark:text-gray-200">{collection.arabicName}</p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
         </div>
         
+        {/* Hadith Categories List */}
         <div>
           <div className="card">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
@@ -94,13 +98,13 @@ const HadithPage: React.FC = () => {
               <ul className="space-y-2">
                 {hadithCategories.map((category) => (
                   <li key={category.id}>
-                    <a 
-                      href="#" 
+                    <Link 
+                      to={`/hadith/category/${category.slug}`}
                       className="flex justify-between py-2 px-3 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                       <span className="text-gray-800 dark:text-gray-200">{category.name}</span>
                       <span className="text-gray-600 dark:text-gray-400">{category.count}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

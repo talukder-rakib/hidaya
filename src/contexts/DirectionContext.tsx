@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 
 type Direction = 'ltr' | 'rtl';
 
@@ -11,16 +17,22 @@ const DirectionContext = createContext<DirectionContextType | undefined>(undefin
 
 export const DirectionProvider = ({ children }: { children: ReactNode }) => {
   const [direction, setDirection] = useState<Direction>(() => {
-    const savedDirection = localStorage.getItem('direction');
-    return (savedDirection === 'rtl' || savedDirection === 'ltr') ? savedDirection : 'ltr';
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('direction');
+      if (saved === 'rtl' || saved === 'ltr') return saved;
+    }
+    return 'ltr';
   });
 
   useEffect(() => {
     localStorage.setItem('direction', direction);
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('dir', direction);
+    }
   }, [direction]);
 
   const toggleDirection = () => {
-    setDirection(prev => prev === 'ltr' ? 'rtl' : 'ltr');
+    setDirection((prev) => (prev === 'ltr' ? 'rtl' : 'ltr'));
   };
 
   return (
@@ -32,8 +44,8 @@ export const DirectionProvider = ({ children }: { children: ReactNode }) => {
 
 export const useDirection = (): DirectionContextType => {
   const context = useContext(DirectionContext);
-  if (context === undefined) {
-    throw new Error('useDirection must be used within a DirectionProvider');
+  if (!context) {
+    throw new Error('❌ useDirection must be used within a <DirectionProvider>');
   }
   return context;
 };

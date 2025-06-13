@@ -5,6 +5,8 @@ import App from './App';
 import './index.css';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { DirectionProvider } from './contexts/DirectionContext';
+import 'leaflet/dist/leaflet.css';
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
